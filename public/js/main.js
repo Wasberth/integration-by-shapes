@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:25565', { 'forceNew': true });
+var socket = io.connect(window.location.hostname, { 'forceNew': true });
 
 socket.on('result', function(data) {
     document.getElementById("result").value = data.result;
