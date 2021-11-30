@@ -107,7 +107,7 @@ io.on('connection', function(socket) {
             return;
         }
 
-        if (form.n < 0 || form.n > 500) {
+        if (form.n < 0 || form.n > 1000000) {
             console.log("awa");
             return;
         }
