@@ -50,7 +50,7 @@ io.on('connection', function(socket) {
 
             result = formula({ x: left }) + formula({ x: right });
 
-            for (let i = 1; i < form.n - 1; i++) {
+            for (let i = 1; i < form.n; i++) {
                 result += 2 * formula({ x: left + (i * deltaX) });
             }
 
@@ -82,7 +82,7 @@ io.on('connection', function(socket) {
 
             result = formula({ x: left }) + formula({ x: right });
 
-            for (let i = 1; i < form.n - 1; i++) {
+            for (let i = 1; i < form.n; i++) {
                 factor = 2 * ((i % 2) + 1)
                 result += factor * formula({ x: left + (i * deltaX) });
             }
